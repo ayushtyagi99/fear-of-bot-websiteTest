@@ -52,6 +52,21 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);background-image:
 .cd-num{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;color:#fff;line-height:1;text-shadow:0 0 32px rgba(163,28,28,0.5)}
 .cd-lbl{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-top:0.5rem}
 
+/* SEASON SWITCH ANIMATION */
+.season-switch{display:flex;align-items:center;justify-content:center;gap:1.75rem;margin-bottom:3rem;flex-wrap:wrap}
+.ss-item{display:flex;flex-direction:column;align-items:center;gap:0.65rem}
+.ss-logo{height:62px;object-fit:contain;border-radius:8px;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5))}
+.ss-cap{font-family:'Space Grotesk',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gray)}
+.ss-cap-next{color:var(--gold)}
+.ss-arrow{color:var(--gold);display:flex;align-items:center}
+.ss-decode{animation:ssOut 5.5s ease-in-out infinite}
+.ss-biobuzz{animation:ssIn 5.5s ease-in-out infinite}
+.ss-arrow svg{animation:ssArrow 5.5s ease-in-out infinite}
+@keyframes ssOut{0%,16%{opacity:1;transform:scale(1)}50%,76%{opacity:0.28;transform:scale(0.88)}100%{opacity:1;transform:scale(1)}}
+@keyframes ssIn{0%,16%{opacity:0.28;transform:scale(0.88)}50%,76%{opacity:1;transform:scale(1.06)}100%{opacity:0.28;transform:scale(0.88)}}
+@keyframes ssArrow{0%,16%{opacity:0.3;transform:translateX(-6px)}50%,76%{opacity:1;transform:translateX(6px)}100%{opacity:0.3;transform:translateX(-6px)}}
+@media (prefers-reduced-motion:reduce){.ss-decode,.ss-biobuzz,.ss-arrow svg{animation:none}.ss-decode,.ss-biobuzz{opacity:1;transform:none}}
+
 /* FOOTER */
 .site-footer{background:#0a0a0c;border-top:2px solid var(--red);padding:3rem 2rem}
 .footer-inner{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center}
@@ -121,8 +136,8 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);background-image:
       <div class="chip">FIRST Tech Challenge · Year 1</div>
       <h2 class="section-title">Who We Are</h2>
       <p class="section-body">Fear of Bot is a rookie FTC robotics team based in the Washington DC area. We're a passionate group of student engineers, programmers, and problem-solvers competing at the highest level of FIRST Tech Challenge.</p>
-      <p class="section-body">FIRST Tech Challenge challenges teams to design, build, program, and operate robots to complete game tasks against competing alliances. Every season brings a new challenge — we bring everything we have.</p>
-      <p class="section-body" style="color:var(--gold);font-weight:500">In our debut season we competed at two regional qualifiers, earned the <strong>Design Award</strong> at Alexandria VA Qualifier I, and were selected for playoff alliances — all in Year 1.</p>
+      <p class="section-body">FIRST Tech Challenge challenges teams to design, build, program, and operate robots to complete game tasks against competing alliances. Every season brings a new challenge, and we bring everything we have.</p>
+      <p class="section-body" style="color:var(--gold);font-weight:500">In our debut season we competed at two regional qualifiers, earned the <strong>Design Award</strong> at Alexandria VA Qualifier I, and were selected for playoff alliances, all in Year 1.</p>
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
         <a href="events.html" class="btn-red" style="font-size:0.85rem">2025–26 Season →</a>
         <a href="sponsors.html" class="btn-gold" style="font-size:0.85rem">Support Us</a>
@@ -136,10 +151,14 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);background-image:
 
 <!-- STATS STRIP -->
 <section style="background:var(--surface);border-top:1px solid rgba(163,28,28,0.15);border-bottom:1px solid rgba(163,28,28,0.15)">
-  <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)">
     <div class="stat-item" style="border-right:1px solid rgba(255,255,255,0.06)">
       <div class="stat-num">4–6</div>
       <div class="stat-lbl">Season Record</div>
+    </div>
+    <div class="stat-item" style="border-right:1px solid rgba(255,255,255,0.06)">
+      <div class="stat-num" style="color:var(--gold)">146</div>
+      <div class="stat-lbl">Season High Score</div>
     </div>
     <div class="stat-item" style="border-right:1px solid rgba(255,255,255,0.06)">
       <div class="stat-num" style="color:var(--gold)">1</div>
@@ -161,10 +180,18 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);background-image:
   <div style="max-width:760px;margin:0 auto;text-align:center">
     <div class="section-label">The Future</div>
     <h2 class="section-title">Next Season Countdown</h2>
-    <div style="display:flex;align-items:center;justify-content:center;gap:2.5rem;margin-bottom:3rem;flex-wrap:wrap">
-      <img src="biobuzz.png" alt="BioBuzz Season" style="height:60px;object-fit:contain;border-radius:8px;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5))">
-      <div style="width:1px;height:44px;background:rgba(255,255,255,0.12)"></div>
-      <img src="decode.png" alt="DECODE Game" style="height:60px;object-fit:contain;border-radius:8px;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5))">
+    <div class="season-switch">
+      <div class="ss-item">
+        <img src="decode.png" alt="DECODE 2025-26" class="ss-logo ss-decode">
+        <span class="ss-cap">2025–26 · This Season</span>
+      </div>
+      <div class="ss-arrow" aria-hidden="true">
+        <svg width="36" height="16" viewBox="0 0 36 16" fill="none"><path d="M2 8h30M26 2l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="ss-item">
+        <img src="biobuzz.png" alt="BioBuzz 2026-27" class="ss-logo ss-biobuzz">
+        <span class="ss-cap ss-cap-next">2026–27 · Next Season</span>
+      </div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem">
       <div class="cd-tile"><div class="cd-num" id="cd-days">00</div><div class="cd-lbl">Days</div></div>
