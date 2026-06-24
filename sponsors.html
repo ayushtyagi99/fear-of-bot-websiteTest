@@ -10,8 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0c0c0e;--surface:#161618;--red:#a31c1c;--gold:#f5b84e;--gray:#8f8e8c}
-html{scroll-behavior:smooth}
+:root{--bg:#0c0c0e;--surface:#161618;--red:#a31c1c;--gold:#f5b84e;--gray:#8f8e8c}html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background-color:var(--bg);background-image:radial-gradient(ellipse 64% 48% at 50% 50%,rgba(245,184,78,0.34) 0%,rgba(245,184,78,0.13) 40%,transparent 74%);background-attachment:fixed;background-repeat:no-repeat;color:#e0e0e0;line-height:1.7;-webkit-font-smoothing:antialiased}
 
 /* NAV */
@@ -94,6 +93,7 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);background-image:
 .cta-sub{font-size:0.88rem;color:rgba(255,255,255,0.55);position:relative;z-index:1;margin-bottom:1.5rem}
 .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.95rem;letter-spacing:0.04em;padding:0.85rem 2rem;border-radius:8px;text-decoration:none;box-shadow:0 0 28px rgba(163,28,28,0.6);position:relative;z-index:1;transition:transform 0.18s,box-shadow 0.18s}
 .cta-btn:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(163,28,28,0.8)}
+.flyer-img:hover{transform:translateY(-4px);box-shadow:0 30px 90px rgba(163,28,28,0.28),0 24px 80px rgba(0,0,0,0.7)!important}
 </style>
 </head>
 <body>
@@ -125,135 +125,21 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);background-image:
   <!-- Page intro (dark) -->
   <div style="max-width:860px;margin:0 auto;padding:3rem 0 2rem">
     <div style="font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.6rem">Partnership Opportunities</div>
-    <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem">Support Fear of Bot</h1>
+    <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem">Support our team!</h1>
     <p style="color:var(--gray);font-size:0.95rem;max-width:560px;line-height:1.7">Your sponsorship helps fund equipment, competition registration, and outreach, putting your brand in front of our community.</p>
   </div>
 
-  <!-- SPONSORSHIP PACKAGE (white paper) -->
-  <div class="pkg-wrap">
-
-    <!-- HEADER -->
-    <div class="pkg-header">
-      <div class="pkg-header-logo"><img src="logo.png" alt="Fear of Bot"></div>
-      <div class="pkg-title">Sponsorship Opportunities</div>
-      <p class="pkg-subtitle">Support our robotics team and help students gain hands-on experience in engineering, programming, leadership, and community outreach. Sponsors receive recognition based on their contribution level.</p>
-    </div>
-
-    <!-- TIER TABLE -->
-    <div class="tier-table-wrap">
-      <div class="tier-grid">
-
-        <!-- HEADER ROW -->
-        <div class="tier-head-blank">
-          <span class="tier-head-label">Benefit</span>
-        </div>
-        <div class="tier-col-plat">
-          <div class="tier-name">Platinum</div>
-          <div class="tier-amount">$1,500+</div>
-        </div>
-        <div class="tier-col-gold">
-          <div class="tier-name">Gold</div>
-          <div class="tier-amount">$750+</div>
-        </div>
-        <div class="tier-col-silver">
-          <div class="tier-name">Silver</div>
-          <div class="tier-amount">$500+</div>
-        </div>
-        <div class="tier-col-bronze">
-          <div class="tier-name">Bronze</div>
-          <div class="tier-amount">$100+</div>
-        </div>
-
-        <!-- BENEFIT ROWS (8 benefits) -->
-        <!-- Row 1 -->
-        <div class="benefit-label-cell">Prime Robot Placement</div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="dash">—</span></div>
-        <div class="check-cell"><span class="dash">—</span></div>
-        <div class="check-cell last"><span class="dash">—</span></div>
-
-        <!-- Row 2 -->
-        <div class="benefit-label-cell">Targeted Outreach Promotion</div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="dash">—</span></div>
-        <div class="check-cell"><span class="dash">—</span></div>
-        <div class="check-cell last"><span class="dash">—</span></div>
-
-        <!-- Row 3 -->
-        <div class="benefit-label-cell">Custom Robot Decal</div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="dash">—</span></div>
-        <div class="check-cell last"><span class="dash">—</span></div>
-
-        <!-- Row 4 -->
-        <div class="benefit-label-cell">Premium Shirt Logo Placement</div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="dash">—</span></div>
-        <div class="check-cell last"><span class="dash">—</span></div>
-
-        <!-- Row 5 -->
-        <div class="benefit-label-cell">Logo on Team Competition Shirts</div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell last"><span class="dash">—</span></div>
-
-        <!-- Row 6 -->
-        <div class="benefit-label-cell">Logo on Pit Trifold</div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell last"><span class="dash">—</span></div>
-
-        <!-- Row 7 -->
-        <div class="benefit-label-cell">Name on Pit Trifold</div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell last"><span class="chk">✓</span></div>
-
-        <!-- Row 8 -->
-        <div class="benefit-label-cell">Engineering Portfolio Feature</div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell"><span class="chk">✓</span></div>
-        <div class="check-cell last"><span class="chk">✓</span></div>
-
-      </div>
-    </div>
-
-    <!-- WHY SUPPORT US -->
-    <div class="why-wrap">
-      <div class="why-title">WHY SUPPORT US?</div>
-      <div class="why-grid">
-        <div class="why-card" style="border-top-color:#a31c1c">
-          <div class="why-card-icon">📣</div>
-          <div class="why-card-title">Exposure</div>
-          <div class="why-card-body">Your company will have a presence at major regional competitions and local events, seen by hundreds of potential customers and community members.</div>
-        </div>
-        <div class="why-card" style="border-top-color:#f5b84e">
-          <div class="why-card-icon">🌱</div>
-          <div class="why-card-title">Community Investment</div>
-          <div class="why-card-body">You are giving back to the community and helping local students develop real-world skills in engineering, programming, and leadership.</div>
-        </div>
-        <div class="why-card" style="border-top-color:#8f8e8c">
-          <div class="why-card-icon">🤝</div>
-          <div class="why-card-title">Long-Term Partnership</div>
-          <div class="why-card-body">Build a lasting partnership with a growing organization that will increase your visibility season after season, year after year.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="cta-wrap">
-      <div class="cta-title">SUPPORT US TODAY!</div>
-      <div class="cta-sub">Ready to partner with Fear of Bot? Reach out and we'll get you started.</div>
-      <a href="mailto:ftcteam30626@gmail.com?subject=Sponsorship%20Inquiry%20%E2%80%94%20Fear%20of%20Bot%20FTC%2030626" class="cta-btn">✉ ftcteam30626@gmail.com</a>
-    </div>
-
+  <!-- SPONSORSHIP FLYER -->
+  <div style="max-width:760px;margin:0 auto">
+    <img src="Sponsorship.png" alt="Fear of Bot — Sponsorship Opportunities" class="flyer-img" onclick="openFlyer()" style="width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 24px 80px rgba(0,0,0,0.6);cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s">
+    <div style="text-align:center;margin-top:1rem;font-family:'Space Grotesk',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray)">🔍 Click the flyer to enlarge</div>
   </div>
+</div>
+
+<!-- FLYER LIGHTBOX -->
+<div id="flyer-lightbox" onclick="closeFlyer()" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.92);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);overflow:auto;padding:3rem 1rem;cursor:zoom-out">
+  <img src="Sponsorship.png" alt="Fear of Bot Sponsorship Opportunities" onclick="event.stopPropagation()" style="display:block;margin:0 auto;width:min(920px,96vw);height:auto;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,0.7);cursor:default">
+  <button onclick="closeFlyer()" aria-label="Close" style="position:fixed;top:1rem;right:1.25rem;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1001">×</button>
 </div>
 
 <!-- FOOTER -->
@@ -276,6 +162,12 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg);background-image:
     <div class="footer-copy">© 2026 Fear of Bot · FTC Team 30626 · FIRST Tech Challenge</div>
   </div>
 </footer>
+
+<script>
+function openFlyer(){document.getElementById('flyer-lightbox').style.display='block';document.body.style.overflow='hidden';}
+function closeFlyer(){document.getElementById('flyer-lightbox').style.display='none';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeFlyer();});
+</script>
 
 </body>
 </html>
